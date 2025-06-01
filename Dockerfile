@@ -15,7 +15,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 # Note: ufw is not needed in Docker. libmcrypt-dev is not in Ubuntu 22.04 main repos and is skipped;
 # some plugins might not build/work without it.
 RUN apt-get update && \
-    apt-get install -y \
+    apt-get install -y --fix-missing \
     autoconf \
     gcc \
     libc6 \
